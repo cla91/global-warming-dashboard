@@ -1,10 +1,12 @@
 import WrapperLayout from "@components/layout/WrapperLayout/WrapperLayout";
-import { Outlet } from "react-router-dom";
 
-export default function App() {
+export default function Error() {
   return (
     <WrapperLayout>
-      <Outlet />
+      <main>
+        <h1>Error 404</h1>
+        <p>Page not found</p>
+      </main>
     </WrapperLayout>
   );
 }

@@ -1,0 +1,57 @@
+import { Monitor, Moon, Sun } from "lucide-react";
+import styles from "@components/ui/button/ThemeSwitcher/ThemeSwitcher.module.scss";
+import { useState } from "react";
+import getLocalStorageTheme from "@/utils/getLocalStorageTheme";
+import setLocalStorageTheme from "@/utils/setLocalStorageTheme";
+
+interface props {
+  minimized?: boolean;
+}
+export default function ThemeSwitcher({ minimized = false }: props) {
+  const [theme, setTheme] = useState<"light" | "dark" | "system">(
+    getLocalStorageTheme()
+  );
+
+  function handleClick(selectedTheme: "light" | "dark" | "system") {
+    setTheme(selectedTheme);
+    if (!localStorage) return;
+    setLocalStorageTheme(selectedTheme);
+    if (selectedTheme === "system") {
+      document.documentElement.removeAttribute("data-theme");
+      return;
+    }
+    document.documentElement.setAttribute("data-theme", selectedTheme);
+  }
+  return (
+    <div
+      role="group"
+      aria-label="Button group for theme switch"
+      className={`${styles.switchGroup} ${minimized ? styles.minimized : ""}`}
+    >
+      <button
+        aria-pressed={theme === "light"}
+        title="Light theme"
+        onClick={() => handleClick("light")}
+      >
+        <Sun />
+        <span className="sr-only">Light</span>
+      </button>
+      <button
+        aria-pressed={theme === "system"}
+        title="System theme"
+        onClick={() => handleClick("system")}
+      >
+        <Monitor />
+        <span className="sr-only">System</span>
+      </button>
+      <button
+        aria-pressed={theme === "dark"}
+        title="Dark theme"
+        onClick={() => handleClick("dark")}
+      >
+        <Moon />
+        <span className="sr-only">Dark</span>
+      </button>
+    </div>
+  );
+}

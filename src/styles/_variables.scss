@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:wght@300..900&display=swap");
+
+:root {
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Rubik", sans-serif;
+  --space: 0.4rem;
+  /* color global*/
+  --neutral-00: 0deg, 0%, 0%;
+  --neutral-200: 0deg, 0%, 88%;
+  --violet-50: 260deg, 38%, 94%;
+  --violet-350: 263deg, 38%, 77%;
+  --violet-600: 264deg, 24%, 39%;
+  --violet-750: 260deg, 30%, 25%;
+  --violet-800: 261deg, 40%, 17%;
+  --violet-850: 263deg, 45%, 19%;
+  --violet-900: 260deg, 45%, 13%;
+  /* color temperature */
+  --orange-50: 30deg, 100%, 96%;
+  --orange-100: 30deg, 100%, 88%;
+  --orange-200: 30deg, 100%, 82%;
+  --orange-300: 30deg, 100%, 74%;
+  --orange-400: 30deg, 100%, 69%;
+  --orange-500: 30deg, 100%, 61%;
+  --orange-600: 29deg, 80%, 56%;
+  --orange-700: 30deg, 63%, 44%;
+  --orange-800: 29deg, 63%, 34%;
+  --orange-900: 30deg, 63%, 26%;
+  /* color carbon dioxide */
+  --mint-50: 173deg, 47%, 93%;
+  --mint-100: 174deg, 48%, 79%;
+  --mint-200: 174deg, 48%, 69%;
+  --mint-300: 174deg, 48%, 55%;
+  --mint-400: 174deg, 57%, 46%;
+  --mint-500: 174deg, 100%, 33%;
+  --mint-600: 174deg, 100%, 30%;
+  --mint-700: 174deg, 100%, 23%;
+  --mint-800: 174deg, 100%, 18%;
+  --mint-900: 174deg, 100%, 14%;
+  /* color methane */
+  --pink-50: 341deg, 100%, 96%;
+  --pink-100: 341deg, 100%, 87%;
+  --pink-200: 341deg, 100%, 80%;
+  --pink-300: 340deg, 100%, 71%;
+  --pink-400: 341deg, 100%, 66%;
+  --pink-500: 340deg, 100%, 57%;
+  --pink-600: 341deg, 81%, 52%;
+  --pink-700: 340deg, 75%, 41%;
+  --pink-800: 341deg, 75%, 31%;
+  --pink-900: 341deg, 74%, 24%;
+  /* color nitrous oxide */
+  --green-50: 144deg, 43%, 93%;
+  --green-100: 147deg, 41%, 78%;
+  --green-200: 146deg, 41%, 68%;
+  --green-300: 146deg, 41%, 53%;
+  --green-400: 146deg, 53%, 44%;
+  --green-500: 146deg, 96%, 30%;
+  --green-600: 146deg, 96%, 27%;
+  --green-700: 146deg, 96%, 21%;
+  --green-800: 146deg, 95%, 17%;
+  --green-900: 146deg, 97%, 13%;
+  /* color polar ice */
+  --blue-50: 200deg, 100%, 96%;
+  --blue-100: 200deg, 96%, 89%;
+  --blue-200: 200deg, 95%, 84%;
+  --blue-300: 199deg, 95%, 76%;
+  --blue-400: 199deg, 96%, 72%;
+  --blue-500: 199deg, 96%, 65%;
+  --blue-600: 199deg, 74%, 59%;
+  --blue-700: 200deg, 53%, 46%;
+  --blue-800: 200deg, 52%, 35%;
+  --blue-900: 199deg, 52%, 27%;
+}

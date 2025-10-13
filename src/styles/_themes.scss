@@ -1,0 +1,30 @@
+:root {
+  --bg-color: hsl(var(--violet-50));
+  --text-color-primary: hsl(var(--violet-850));
+  --text-color-secondary: hsl(var(--violet-600));
+  --border-color: hsl(var(--neutral-200));
+  --card-color: hsl(var(--neutral-00));
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: hsl(var(--violet-900));
+    --text-color-primary: hsl(var(--violet-50));
+    --text-color-secondary: hsl(var(--violet-350));
+    --border-color: hsl(var(--violet-750));
+    --card-color: hsl(var(--violet-800));
+  }
+}
+[data-theme="light"] {
+  --bg-color: hsl(var(--violet-50));
+  --text-color-primary: hsl(var(--violet-850));
+  --text-color-secondary: hsl(var(--violet-600));
+  --border-color: hsl(var(--neutral-200));
+  --card-color: hsl(var(--neutral-00));
+}
+[data-theme="dark"] {
+  --bg-color: hsl(var(--violet-900));
+  --text-color-primary: hsl(var(--violet-50));
+  --text-color-secondary: hsl(var(--violet-350));
+  --border-color: hsl(var(--violet-750));
+  --card-color: hsl(var(--violet-800));
+}

@@ -1,26 +1,28 @@
 import { Monitor, Moon, Sun } from "lucide-react";
 import styles from "@components/ui/button/ThemeSwitcher/ThemeSwitcher.module.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import getLocalStorageTheme from "@/utils/getLocalStorageTheme";
 import setLocalStorageTheme from "@/utils/setLocalStorageTheme";
 
 interface props {
   minimized?: boolean;
 }
+
 export default function ThemeSwitcher({ minimized = false }: props) {
   const [theme, setTheme] = useState<"light" | "dark" | "system">(
     getLocalStorageTheme()
   );
+  useEffect(() => {
+    if (theme === "system") {
+      document.documentElement.removeAttribute("data-theme");
+    } else {
+      document.documentElement.setAttribute("data-theme", theme);
+    }
+    setLocalStorageTheme(theme);
+  }, [theme]);
 
   function handleClick(selectedTheme: "light" | "dark" | "system") {
     setTheme(selectedTheme);
-    if (!localStorage) return;
-    setLocalStorageTheme(selectedTheme);
-    if (selectedTheme === "system") {
-      document.documentElement.removeAttribute("data-theme");
-      return;
-    }
-    document.documentElement.setAttribute("data-theme", selectedTheme);
   }
   return (
     <div

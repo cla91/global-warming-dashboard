@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 import getLocalStorageTheme from "@/utils/getLocalStorageTheme";
 import setLocalStorageTheme from "@/utils/setLocalStorageTheme";
 
-interface props {
+interface ThemeSwitcherProps {
   minimized?: boolean;
 }
 
-export default function ThemeSwitcher({ minimized = false }: props) {
+export default function ThemeSwitcher({ minimized }: ThemeSwitcherProps) {
   const [theme, setTheme] = useState<"light" | "dark" | "system">(
-    getLocalStorageTheme()
+    getLocalStorageTheme
   );
   useEffect(() => {
     if (theme === "system") {

@@ -1,4 +1,9 @@
+@use "./mixins";
+* {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
 body {
+  color-scheme: dark light;
   font-family: var(--font-primary);
   font-size: 1.6rem;
   line-height: 1.5;
@@ -11,4 +16,16 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  @include mixins.screen-md {
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto 1fr;
+    header {
+      grid-row: 1 / -1;
+    }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
 }

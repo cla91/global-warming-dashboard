@@ -1,4 +1,5 @@
-import Navigation from "@components/layout/Navigation/Navigation";
+import Header from "@components/layout/Header/Header";
+import Footer from "@components/layout/Footer/Footer";
 
 interface props {
   children: React.ReactNode;
@@ -7,11 +8,9 @@ interface props {
 export default function WrapperLayout({ children }: props) {
   return (
     <>
-      <header>
-        <Navigation />
-      </header>
+      <Header />
       {children}
-      <footer>Footer</footer>
+      <Footer />
     </>
   );
 }

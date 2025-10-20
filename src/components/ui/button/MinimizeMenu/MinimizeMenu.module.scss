@@ -1,0 +1,25 @@
+.minimizeBtn {
+  display: none;
+  @include screen-md {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(var(--space) * 11);
+    width: calc(var(--space) * 11);
+    border-radius: 1.2rem;
+    :global(.lucide) {
+      width: 2.4rem;
+      height: 2.4rem;
+      stroke-width: 1.75;
+      justify-self: center;
+      transition: stroke-width 0.3s ease;
+    }
+    &:hover {
+      color: var(--text-color-secondary);
+    }
+    &:focus-visible {
+      outline: 0.2rem solid var(--text-color-primary);
+      outline-offset: 0.2rem;
+    }
+  }
+}

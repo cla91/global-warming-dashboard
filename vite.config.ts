@@ -6,4 +6,11 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "/src/styles/mixins" as *;`,
+      },
+    },
+  },
 });

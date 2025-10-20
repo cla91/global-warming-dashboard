@@ -1,4 +1,7 @@
+import useDocumentTitle from "@/hooks/useDocumentTitle";
+
 export default function Temperature() {
+  useDocumentTitle("Temperature | Global Warming Dashboard");
   return (
     <main>
       <h1>Temperature</h1>

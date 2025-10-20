@@ -1,4 +1,7 @@
+import useDocumentTitle from "@/hooks/useDocumentTitle";
+
 export default function NitrousOxide() {
+  useDocumentTitle("Nitrous Oxide | Global Warming Dashboard");
   return (
     <main>
       <h1>Nitrous Oxide</h1>

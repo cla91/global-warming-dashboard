@@ -1,4 +1,7 @@
+import useDocumentTitle from "@/hooks/useDocumentTitle";
+
 export default function PolarIce() {
+  useDocumentTitle("Polar Ice | Global Warming Dashboard");
   return (
     <main>
       <h1>Polar Ice</h1>

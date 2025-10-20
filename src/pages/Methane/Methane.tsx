@@ -1,4 +1,7 @@
+import useDocumentTitle from "@/hooks/useDocumentTitle";
+
 export default function Methane() {
+  useDocumentTitle("Methane | Global Warming Dashboard");
   return (
     <main>
       <h1>Methane</h1>

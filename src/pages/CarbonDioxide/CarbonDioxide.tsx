@@ -1,4 +1,7 @@
+import useDocumentTitle from "@/hooks/useDocumentTitle";
+
 export default function CarbonDioxide() {
+  useDocumentTitle("Carbon Dioxide | Global Warming Dashboard");
   return (
     <main>
       <h1>Carbon Dioxide</h1>

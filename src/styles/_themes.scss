@@ -5,6 +5,7 @@
   --border-color: hsl(var(--neutral-200));
   --card-color: hsl(var(--neutral-00));
   /* category color */
+  /* navLink */
   --temp-navLink: hsl(var(--orange-600));
   --co2-navLink: hsl(var(--mint-600));
   --ch4-navLink: hsl(var(--pink-600));
@@ -15,6 +16,12 @@
   --ch4-navLink-hover: hsl(var(--pink-700));
   --n2o-navLink-hover: hsl(var(--green-700));
   --pi-navLink-hover: hsl(var(--blue-700));
+  /* card */
+  --temp-card-bg: hsl(var(--orange-600));
+  --co2-card-bg: hsl(var(--mint-600));
+  --ch4-card-bg: hsl(var(--pink-600));
+  --n2o-card-bg: hsl(var(--green-600));
+  --pi-card-bg: hsl(var(--blue-600));
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -24,6 +31,7 @@
     --border-color: hsl(var(--violet-750));
     --card-color: hsl(var(--violet-800));
     /* category color */
+    /* navLink */
     --temp-navLink: hsl(var(--orange-500));
     --co2-navLink: hsl(var(--mint-400));
     --ch4-navLink: hsl(var(--pink-400));
@@ -34,6 +42,12 @@
     --ch4-navLink-hover: hsl(var(--pink-200));
     --n2o-navLink-hover: hsl(var(--green-200));
     --pi-navLink-hover: hsl(var(--blue-200));
+    /* card */
+    --temp-card-bg: hsl(var(--orange-500));
+    --co2-card-bg: hsl(var(--mint-400));
+    --ch4-card-bg: hsl(var(--pink-400));
+    --n2o-card-bg: hsl(var(--green-400));
+    --pi-card-bg: hsl(var(--blue-400));
   }
 }
 [data-theme="light"] {
@@ -44,6 +58,7 @@
   --border-color: hsl(var(--neutral-200));
   --card-color: hsl(var(--neutral-00));
   /* category color */
+  /* navLink */
   --temp-navLink: hsl(var(--orange-600));
   --co2-navLink: hsl(var(--mint-600));
   --ch4-navLink: hsl(var(--pink-600));
@@ -54,6 +69,12 @@
   --ch4-navLink-hover: hsl(var(--pink-700));
   --n2o-navLink-hover: hsl(var(--green-700));
   --pi-navLink-hover: hsl(var(--blue-700));
+  /* card */
+  --temp-card-bg: hsl(var(--orange-600));
+  --co2-card-bg: hsl(var(--mint-600));
+  --ch4-card-bg: hsl(var(--pink-600));
+  --n2o-card-bg: hsl(var(--green-600));
+  --pi-card-bg: hsl(var(--blue-600));
 }
 [data-theme="dark"] {
   color-scheme: dark;
@@ -63,6 +84,7 @@
   --border-color: hsl(var(--violet-750));
   --card-color: hsl(var(--violet-800));
   /* category color */
+  /* navLink */
   --temp-navLink: hsl(var(--orange-500));
   --co2-navLink: hsl(var(--mint-400));
   --ch4-navLink: hsl(var(--pink-400));
@@ -73,4 +95,10 @@
   --ch4-navLink-hover: hsl(var(--pink-200));
   --n2o-navLink-hover: hsl(var(--green-200));
   --pi-navLink-hover: hsl(var(--blue-200));
+  /* card */
+  --temp-card-bg: hsl(var(--orange-500));
+  --co2-card-bg: hsl(var(--mint-400));
+  --ch4-card-bg: hsl(var(--pink-400));
+  --n2o-card-bg: hsl(var(--green-400));
+  --pi-card-bg: hsl(var(--blue-400));
 }

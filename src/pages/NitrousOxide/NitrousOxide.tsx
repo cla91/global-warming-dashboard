@@ -3,7 +3,7 @@ import useDocumentTitle from "@/hooks/useDocumentTitle";
 export default function NitrousOxide() {
   useDocumentTitle("Nitrous Oxide | Global Warming Dashboard");
   return (
-    <main>
+    <div>
       <h1>Nitrous Oxide</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cum
@@ -11,6 +11,6 @@ export default function NitrousOxide() {
         Quaerat nesciunt debitis impedit optio tempore eaque, consectetur
         inventore quae.
       </p>
-    </main>
+    </div>
   );
 }

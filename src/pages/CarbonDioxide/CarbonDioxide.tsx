@@ -3,7 +3,7 @@ import useDocumentTitle from "@/hooks/useDocumentTitle";
 export default function CarbonDioxide() {
   useDocumentTitle("Carbon Dioxide | Global Warming Dashboard");
   return (
-    <main>
+    <div>
       <h1>Carbon Dioxide</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cum
@@ -11,6 +11,6 @@ export default function CarbonDioxide() {
         Quaerat nesciunt debitis impedit optio tempore eaque, consectetur
         inventore quae.
       </p>
-    </main>
+    </div>
   );
 }

@@ -1,0 +1,23 @@
+.card {
+  border-radius: 1.2rem;
+  color: var(--bg-color);
+  padding-inline: calc(var(--space) * 4);
+  padding-block: calc(var(--space) * 5);
+  //da togliere
+  word-break: break-all;
+}
+.temp {
+  background-color: var(--temp-card-bg);
+}
+.co2 {
+  background-color: var(--co2-card-bg);
+}
+.ch4 {
+  background-color: var(--ch4-card-bg);
+}
+.n2o {
+  background-color: var(--n2o-card-bg);
+}
+.pi {
+  background-color: var(--pi-card-bg);
+}

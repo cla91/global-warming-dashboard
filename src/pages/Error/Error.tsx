@@ -5,10 +5,10 @@ export default function Error() {
   useDocumentTitle("Error 404 | Global Warming Dashboard");
   return (
     <WrapperLayout>
-      <main>
+      <div>
         <h1>Error 404</h1>
         <p>Page not found</p>
-      </main>
+      </div>
     </WrapperLayout>
   );
 }

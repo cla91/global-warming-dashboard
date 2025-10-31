@@ -6,28 +6,21 @@ import styles from "@components/layout/Header/Header.module.scss";
 import HamburgerButton from "@components/ui/button/HamburgerButton/HamburgerButton";
 import MinimizeMenu from "@components/ui/button/MinimizeMenu/MinimizeMenu";
 import { useState } from "react";
+import useSidebarContext from "@/context/Sidebar/useSidebarContext";
 import useMediaQuery from "@/hooks/useMediaQuery";
 
 export default function Header() {
-  const [desktopMenuMinimized, setDesktopMenuMinimized] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 48rem)");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { minimize } = useSidebarContext();
 
   return (
-    <header className={styles.header}>
-      <div
-        className={`${styles.topBar} ${
-          desktopMenuMinimized ? styles.minimized : ""
-        }`}
-      >
+    <header className={`${styles.header} ${minimize ? styles.minimized : ""}`}>
+      <div className={`${styles.topBar} ${minimize ? styles.minimized : ""}`}>
         {/* logo */}
         <Link to="/" className={styles.logoLink}>
           <img className={styles.logoImg} src={logo} alt="Logo GlobalWarming" />
-          <span
-            className={`${isDesktop && desktopMenuMinimized ? "sr-only" : ""} ${
-              styles.logoText
-            }`}
-          >
+          <span className={`${minimize ? "sr-only" : ""} ${styles.logoText}`}>
             GlobalWarming
           </span>
         </Link>
@@ -38,10 +31,7 @@ export default function Header() {
           setMenuOpen={setMobileMenuOpen}
         />
         {/* controller desktop menu */}
-        <MinimizeMenu
-          minimizeMenu={desktopMenuMinimized}
-          setMinimizeMenu={setDesktopMenuMinimized}
-        />
+        <MinimizeMenu />
       </div>
 
       {/* menu */}
@@ -51,11 +41,11 @@ export default function Header() {
         className={`${styles.menu} ${mobileMenuOpen ? styles.open : ""}`}
       >
         <Navigation
-          onlyIcons={desktopMenuMinimized}
+          onlyIcons={minimize}
           menuOpen={mobileMenuOpen}
           setMenuOpen={setMobileMenuOpen}
         />
-        <ThemeSwitcher minimized={desktopMenuMinimized} />
+        <ThemeSwitcher minimized={minimize} />
       </div>
     </header>
   );

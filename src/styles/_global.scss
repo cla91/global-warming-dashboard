@@ -14,13 +14,50 @@ body {
 }
 #root {
   min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-rows: auto 1fr auto;
   @include mixins.screen-md {
     grid-template-rows: 1fr auto;
-    grid-template-columns: auto 1fr;
-    header {
-      grid-row: 1 / -1;
+  }
+}
+h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  @include mixins.screen-lg {
+    font-size: 4.4rem;
+  }
+}
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  @include mixins.screen-lg {
+    font-size: 3.2rem;
+  }
+}
+h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  @include mixins.screen-lg {
+    font-size: 1.8rem;
+  }
+}
+main {
+  padding-block: calc(var(--space) * 6);
+  padding-inline: calc(var(--space) * 4);
+  transition: padding 0.2s ease-in-out;
+  @include mixins.screen-md {
+    padding-inline-start: calc(var(--space) * 4 + 28rem);
+    &.minimize {
+      padding-inline-start: calc(var(--space) * 4 + 9.1rem);
+    }
+  }
+  @include mixins.screen-lg {
+    padding-block: calc(var(--space) * 8);
+    padding-inline: calc(var(--space) * 10);
+    padding-inline-start: calc(var(--space) * 10 + 28rem);
+    &.minimize {
+      padding-inline-start: calc(var(--space) * 10 + 9.1rem);
     }
   }
 }

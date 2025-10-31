@@ -1,20 +1,18 @@
 import { PanelLeftClose, PanelLeftOpen } from "lucide-react";
 import styles from "@components/ui/button/MinimizeMenu/MinimizeMenu.module.scss";
 
-interface MinimizeMenuProps {
-  minimizeMenu: boolean;
-  setMinimizeMenu: (minimizeMenu: boolean) => void;
-}
-export default function MinimizeMenu({
-  minimizeMenu,
-  setMinimizeMenu,
-}: MinimizeMenuProps) {
+import useSidebarContext from "@/context/Sidebar/useSidebarContext";
+
+export default function MinimizeMenu() {
+  const { minimize, setIsMinimized } = useSidebarContext();
+
   return (
     <button
-      onClick={() => setMinimizeMenu(!minimizeMenu)}
+      onClick={() => setIsMinimized((minimize) => !minimize)}
       className={styles.minimizeBtn}
+      title={minimize ? "Expand Menu" : "Minimize Menu"}
     >
-      {minimizeMenu ? (
+      {minimize ? (
         <>
           <span className="sr-only">"Expand Menu"</span>
           <PanelLeftOpen />

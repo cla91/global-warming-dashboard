@@ -1,9 +1,9 @@
 .button {
   display: flex;
   flex-direction: column;
-  width: calc(var(--space) * 12);
-  height: calc(var(--space) * 12);
-  border-radius: calc(var(--space) * 2);
+  width: $space-12;
+  height: $space-12;
+  border-radius: $space-2;
   justify-content: space-between;
   padding: 1.1rem;
   cursor: pointer;

@@ -1,104 +1,106 @@
+@use "variables" as *;
+
 :root {
-  --bg-color: hsl(var(--violet-50));
-  --text-color-primary: hsl(var(--violet-850));
-  --text-color-secondary: hsl(var(--violet-600));
-  --border-color: hsl(var(--neutral-200));
-  --card-color: hsl(var(--neutral-00));
+  --bg-color: hsl(#{$violet-50});
+  --text-color-primary: hsl(#{$violet-850});
+  --text-color-secondary: hsl(#{$violet-600});
+  --border-color: hsl(#{$neutral-200});
+  --card-color: hsl(#{$violet-25});
   /* category color */
   /* navLink */
-  --temp-navLink: hsl(var(--orange-600));
-  --co2-navLink: hsl(var(--mint-600));
-  --ch4-navLink: hsl(var(--pink-600));
-  --n2o-navLink: hsl(var(--green-600));
-  --pi-navLink: hsl(var(--blue-600));
-  --temp-navLink-hover: hsl(var(--orange-700));
-  --co2-navLink-hover: hsl(var(--mint-700));
-  --ch4-navLink-hover: hsl(var(--pink-700));
-  --n2o-navLink-hover: hsl(var(--green-700));
-  --pi-navLink-hover: hsl(var(--blue-700));
+  --temp-navLink: hsl(#{$orange-600});
+  --co2-navLink: hsl(#{$mint-600});
+  --ch4-navLink: hsl(#{$pink-600});
+  --n2o-navLink: hsl(#{$green-600});
+  --gsi-navLink: hsl(#{$blue-600});
+  --temp-navLink-hover: hsl(#{$orange-700});
+  --co2-navLink-hover: hsl(#{$mint-700});
+  --ch4-navLink-hover: hsl(#{$pink-700});
+  --n2o-navLink-hover: hsl(#{$green-700});
+  --gsi-navLink-hover: hsl(#{$blue-700});
   /* card */
-  --temp-card-bg: hsl(var(--orange-600));
-  --co2-card-bg: hsl(var(--mint-600));
-  --ch4-card-bg: hsl(var(--pink-600));
-  --n2o-card-bg: hsl(var(--green-600));
-  --pi-card-bg: hsl(var(--blue-600));
+  --temp-card-bg: hsl(#{$orange-600});
+  --co2-card-bg: hsl(#{$mint-600});
+  --ch4-card-bg: hsl(#{$pink-600});
+  --n2o-card-bg: hsl(#{$green-600});
+  --gsi-card-bg: hsl(#{$blue-600});
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: hsl(var(--violet-900));
-    --text-color-primary: hsl(var(--violet-50));
-    --text-color-secondary: hsl(var(--violet-350));
-    --border-color: hsl(var(--violet-750));
-    --card-color: hsl(var(--violet-800));
+    --bg-color: hsl(#{$violet-900});
+    --text-color-primary: hsl(#{$violet-50});
+    --text-color-secondary: hsl(#{$violet-350});
+    --border-color: hsl(#{$violet-750});
+    --card-color: hsl(#{$violet-800});
     /* category color */
     /* navLink */
-    --temp-navLink: hsl(var(--orange-500));
-    --co2-navLink: hsl(var(--mint-400));
-    --ch4-navLink: hsl(var(--pink-400));
-    --n2o-navLink: hsl(var(--green-400));
-    --pi-navLink: hsl(var(--blue-400));
-    --temp-navLink-hover: hsl(var(--orange-200));
-    --co2-navLink-hover: hsl(var(--mint-200));
-    --ch4-navLink-hover: hsl(var(--pink-200));
-    --n2o-navLink-hover: hsl(var(--green-200));
-    --pi-navLink-hover: hsl(var(--blue-200));
+    --temp-navLink: hsl(#{$orange-500});
+    --co2-navLink: hsl(#{$mint-400});
+    --ch4-navLink: hsl(#{$pink-400});
+    --n2o-navLink: hsl(#{$green-400});
+    --gsi-navLink: hsl(#{$blue-400});
+    --temp-navLink-hover: hsl(#{$orange-200});
+    --co2-navLink-hover: hsl(#{$mint-200});
+    --ch4-navLink-hover: hsl(#{$pink-200});
+    --n2o-navLink-hover: hsl(#{$green-200});
+    --gsi-navLink-hover: hsl(#{$blue-200});
     /* card */
-    --temp-card-bg: hsl(var(--orange-500));
-    --co2-card-bg: hsl(var(--mint-400));
-    --ch4-card-bg: hsl(var(--pink-400));
-    --n2o-card-bg: hsl(var(--green-400));
-    --pi-card-bg: hsl(var(--blue-400));
+    --temp-card-bg: hsl(#{$orange-500});
+    --co2-card-bg: hsl(#{$mint-400});
+    --ch4-card-bg: hsl(#{$pink-400});
+    --n2o-card-bg: hsl(#{$green-400});
+    --gsi-card-bg: hsl(#{$blue-400});
   }
 }
 [data-theme="light"] {
   color-scheme: light;
-  --bg-color: hsl(var(--violet-50));
-  --text-color-primary: hsl(var(--violet-850));
-  --text-color-secondary: hsl(var(--violet-600));
-  --border-color: hsl(var(--neutral-200));
-  --card-color: hsl(var(--neutral-00));
+  --bg-color: hsl(#{$violet-50});
+  --text-color-primary: hsl(#{$violet-850});
+  --text-color-secondary: hsl(#{$violet-600});
+  --border-color: hsl(#{$neutral-200});
+  --card-color: hsl(#{$violet-25});
   /* category color */
   /* navLink */
-  --temp-navLink: hsl(var(--orange-600));
-  --co2-navLink: hsl(var(--mint-600));
-  --ch4-navLink: hsl(var(--pink-600));
-  --n2o-navLink: hsl(var(--green-600));
-  --pi-navLink: hsl(var(--blue-600));
-  --temp-navLink-hover: hsl(var(--orange-700));
-  --co2-navLink-hover: hsl(var(--mint-700));
-  --ch4-navLink-hover: hsl(var(--pink-700));
-  --n2o-navLink-hover: hsl(var(--green-700));
-  --pi-navLink-hover: hsl(var(--blue-700));
+  --temp-navLink: hsl(#{$orange-600});
+  --co2-navLink: hsl(#{$mint-600});
+  --ch4-navLink: hsl(#{$pink-600});
+  --n2o-navLink: hsl(#{$green-600});
+  --gsi-navLink: hsl(#{$blue-600});
+  --temp-navLink-hover: hsl(#{$orange-700});
+  --co2-navLink-hover: hsl(#{$mint-700});
+  --ch4-navLink-hover: hsl(#{$pink-700});
+  --n2o-navLink-hover: hsl(#{$green-700});
+  --gsi-navLink-hover: hsl(#{$blue-700});
   /* card */
-  --temp-card-bg: hsl(var(--orange-600));
-  --co2-card-bg: hsl(var(--mint-600));
-  --ch4-card-bg: hsl(var(--pink-600));
-  --n2o-card-bg: hsl(var(--green-600));
-  --pi-card-bg: hsl(var(--blue-600));
+  --temp-card-bg: hsl(#{$orange-600});
+  --co2-card-bg: hsl(#{$mint-600});
+  --ch4-card-bg: hsl(#{$pink-600});
+  --n2o-card-bg: hsl(#{$green-600});
+  --gsi-card-bg: hsl(#{$blue-600});
 }
 [data-theme="dark"] {
   color-scheme: dark;
-  --bg-color: hsl(var(--violet-900));
-  --text-color-primary: hsl(var(--violet-50));
-  --text-color-secondary: hsl(var(--violet-350));
-  --border-color: hsl(var(--violet-750));
-  --card-color: hsl(var(--violet-800));
+  --bg-color: hsl(#{$violet-900});
+  --text-color-primary: hsl(#{$violet-50});
+  --text-color-secondary: hsl(#{$violet-350});
+  --border-color: hsl(#{$violet-750});
+  --card-color: hsl(#{$violet-800});
   /* category color */
   /* navLink */
-  --temp-navLink: hsl(var(--orange-500));
-  --co2-navLink: hsl(var(--mint-400));
-  --ch4-navLink: hsl(var(--pink-400));
-  --n2o-navLink: hsl(var(--green-400));
-  --pi-navLink: hsl(var(--blue-400));
-  --temp-navLink-hover: hsl(var(--orange-200));
-  --co2-navLink-hover: hsl(var(--mint-200));
-  --ch4-navLink-hover: hsl(var(--pink-200));
-  --n2o-navLink-hover: hsl(var(--green-200));
-  --pi-navLink-hover: hsl(var(--blue-200));
+  --temp-navLink: hsl(#{$orange-500});
+  --co2-navLink: hsl(#{$mint-400});
+  --ch4-navLink: hsl(#{$pink-400});
+  --n2o-navLink: hsl(#{$green-400});
+  --gsi-navLink: hsl(#{$blue-400});
+  --temp-navLink-hover: hsl(#{$orange-200});
+  --co2-navLink-hover: hsl(#{$mint-200});
+  --ch4-navLink-hover: hsl(#{$pink-200});
+  --n2o-navLink-hover: hsl(#{$green-200});
+  --gsi-navLink-hover: hsl(#{$blue-200});
   /* card */
-  --temp-card-bg: hsl(var(--orange-500));
-  --co2-card-bg: hsl(var(--mint-400));
-  --ch4-card-bg: hsl(var(--pink-400));
-  --n2o-card-bg: hsl(var(--green-400));
-  --pi-card-bg: hsl(var(--blue-400));
+  --temp-card-bg: hsl(#{$orange-500});
+  --co2-card-bg: hsl(#{$mint-400});
+  --ch4-card-bg: hsl(#{$pink-400});
+  --n2o-card-bg: hsl(#{$green-400});
+  --gsi-card-bg: hsl(#{$blue-400});
 }

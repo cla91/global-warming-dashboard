@@ -4,8 +4,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(var(--space) * 11);
-    width: calc(var(--space) * 11);
+    height: $space-11;
+    width: $space-11;
     border-radius: 1.2rem;
     :global(.lucide) {
       width: 2.4rem;

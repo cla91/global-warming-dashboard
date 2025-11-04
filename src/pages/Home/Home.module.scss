@@ -1,11 +1,10 @@
 .home {
   display: grid;
-  gap: calc(var(--space) * 8);
+  gap: $space-8;
   grid-template-rows: auto 1fr;
 }
 .cardGrid {
   display: grid;
-  gap: calc(var(--space) * 4);
-
+  gap: $space-4;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
 }

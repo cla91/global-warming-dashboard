@@ -1,7 +1,7 @@
 .navigation {
   ul {
     display: grid;
-    gap: calc(var(--space) * 2);
+    gap: $space-2;
   }
   /* base styles for lucide icon, defined globally */
   :global(.lucide) {
@@ -12,10 +12,10 @@
     transition: stroke-width 0.3s ease;
   }
   a {
-    height: calc(var(--space) * 12);
+    height: $space-12;
     display: grid;
     align-items: center;
-    grid-template-columns: calc(var(--space) * 12) 1fr;
+    grid-template-columns: $space-12 1fr;
     border-radius: 1.2rem;
     transition: background-color 0.3s ease, color 0.3s ease,
       font-weight 0.3s ease;
@@ -88,15 +88,15 @@
       outline: 0.2rem solid var(--n2o-navLink);
     }
   }
-  .polarIce {
+  .globalSeaIce {
     &.active {
-      background-color: var(--pi-navLink);
+      background-color: var(--gsi-navLink);
     }
     &:hover:not(.active) {
-      background-color: var(--pi-navLink-hover);
+      background-color: var(--gsi-navLink-hover);
     }
     &:focus-visible {
-      outline: 0.2rem solid var(--pi-navLink);
+      outline: 0.2rem solid var(--gsi-navLink);
     }
   }
 }

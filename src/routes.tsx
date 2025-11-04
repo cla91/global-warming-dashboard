@@ -5,7 +5,7 @@ import Temperature from "@pages/Temperature/Temperature";
 import CarbonDioxide from "@pages/CarbonDioxide/CarbonDioxide";
 import Methane from "@pages/Methane/Methane";
 import NitrousOxide from "@pages/NitrousOxide/NitrousOxide";
-import PolarIce from "@pages/PolarIce/PolarIce";
+import GlobalSeaIce from "@/pages/GlobalSeaIce/GlobalSeaIce";
 
 export default [
   {
@@ -34,8 +34,8 @@ export default [
         element: <NitrousOxide />,
       },
       {
-        path: "/polar-ice",
-        element: <PolarIce />,
+        path: "/global-sea-ice",
+        element: <GlobalSeaIce />,
       },
     ],
   },

@@ -1,8 +1,8 @@
-import type PolarIceRecord from "@/types/PolarIceRecord";
+import type GlobalSeaIceRecord from "@/types/GlobalSeaIceRecord";
 import type FormattedDataRecord from "@/types/FormattedDataRecord";
 
-export default function formatPolarIceData(
-  data: Record<string, PolarIceRecord>
+export default function formatGlobalSeaIceData(
+  data: Record<string, GlobalSeaIceRecord>
 ): FormattedDataRecord[] {
   const formattedData = Object.entries(data).map(([yearMonth, obj]) => ({
     date: new Date(

@@ -95,14 +95,14 @@ export default function Navigation({
         <li>
           <NavLink
             onClick={closeMenu}
-            to="/polar-ice"
+            to="/global-sea-ice"
             className={({ isActive }) =>
-              `${styles.polarIce} ${isActive ? styles.active : ""}`
+              `${styles.globalSeaIce} ${isActive ? styles.active : ""}`
             }
           >
             <MountainSnow />
             <span className={isDesktop && onlyIcons ? "sr-only" : ""}>
-              Polar Ice
+              Global Sea Ice
             </span>
           </NavLink>
         </li>

@@ -1,7 +1,7 @@
 import axios from "axios";
-import type PolarIceRecord from "@/types/PolarIceRecord";
+import type GlobalSeaIceRecord from "@/types/GlobalSeaIceRecord";
 
-interface PolarIceApiResponse {
+interface GlobalSeaIceApiResponse {
   error: string | null;
   arcticData: {
     description: {
@@ -12,13 +12,13 @@ interface PolarIceApiResponse {
       decadalTrend: number;
       missing: number;
     };
-    data: Record<string, PolarIceRecord>;
+    data: Record<string, GlobalSeaIceRecord>;
   };
 }
-export default async function getPolarIce(): Promise<
-  Record<string, PolarIceRecord>
+export default async function getGlobalSeaIce(): Promise<
+  Record<string, GlobalSeaIceRecord>
 > {
-  const response = await axios.get<PolarIceApiResponse>(
+  const response = await axios.get<GlobalSeaIceApiResponse>(
     "https://global-warming.org/api/arctic-api"
   );
   if (response.data.error) throw new Error(response.data.error);

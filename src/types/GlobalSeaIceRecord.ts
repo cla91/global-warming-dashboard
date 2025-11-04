@@ -1,4 +1,4 @@
-export default interface PolarIceRecord {
+export default interface GloabalSeaIceRecord {
   value: number;
   anom: number;
   monthlyMean: number;

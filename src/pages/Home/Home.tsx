@@ -5,7 +5,7 @@ import useTemperature from "@/hooks/useTemperature";
 import useCarbonDioxide from "@/hooks/useCarbonDioxide";
 import useMethane from "@/hooks/useMethane";
 import useNitrousOxide from "@/hooks/useNitrousOxide";
-import usePolarIce from "@/hooks/usePolarIce";
+import useGlobalSeaIce from "@/hooks/useGlobalSeaIce";
 
 export default function Home() {
   useDocumentTitle("Global Warming Dashboard");
@@ -31,9 +31,9 @@ export default function Home() {
           query={useNitrousOxide}
         />
         <CategoryCard
-          title={"Polar Ice"}
-          className={"pi"}
-          query={usePolarIce}
+          title={"Global Sea Ice"}
+          className={"gsi"}
+          query={useGlobalSeaIce}
         />
       </div>
     </div>

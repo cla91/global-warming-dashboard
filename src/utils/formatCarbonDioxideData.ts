@@ -3,15 +3,21 @@ import type FormattedDataRecord from "@/types/FormattedDataRecord";
 
 export default function fromatCarbonDioxideData(
   data: CarbonDioxideRecord[]
-): FormattedDataRecord[] {
-  return data.map((record) => ({
-    date: new Date(
-      Date.UTC(
-        Number(record.year),
-        Number(record.month) - 1,
-        Number(record.day)
-      )
-    ),
-    value: Number(record.trend),
-  }));
+): FormattedDataRecord {
+  return {
+    nameShort: "co2",
+    unitLong: "parts per million",
+    unitShort: "ppm",
+    records: [
+      {
+        name: "trend",
+        record: data.map((r) => ({
+          date: new Date(
+            Date.UTC(Number(r.year), Number(r.month) - 1, Number(r.day))
+          ),
+          value: Number(r.trend),
+        })),
+      },
+    ],
+  };
 }

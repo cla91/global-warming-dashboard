@@ -1,0 +1,33 @@
+.dataLegend {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: $space-2;
+  text-align: center;
+  flex-wrap: wrap;
+  li {
+    flex: 1;
+    min-width: 25ch;
+  }
+  strong {
+    text-transform: capitalize;
+  }
+}
+.station {
+  color: var(--temp-chart-station);
+}
+.land {
+  color: var(--temp-chart-land);
+}
+.co2 {
+  color: var(--co2-chart);
+}
+.ch4 {
+  color: var(--ch4-chart);
+}
+.n2o {
+  color: var(--n2o-chart);
+}
+.gsi {
+  color: var(--gsi-chart);
+}

@@ -2,17 +2,17 @@ import getNitrousOxide from "@/api/getNitrousOxide";
 import type FormattedDataRecord from "@/types/FormattedDataRecord";
 import formatNitrousOxideData from "@/utils/formatNitrousOxideData";
 
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, type UseQueryResult } from "@tanstack/react-query";
 
-export default function useNitrousOxide(options?: {
-  select?: (data: FormattedDataRecord[]) => FormattedDataRecord[];
-}) {
+export default function useNitrousOxide(): UseQueryResult<
+  FormattedDataRecord,
+  Error
+> {
   return useQuery({
     queryKey: ["nitrousOxide"],
     queryFn: async () => {
       const response = await getNitrousOxide();
       return formatNitrousOxideData(response);
     },
-    select: options?.select,
   });
 }

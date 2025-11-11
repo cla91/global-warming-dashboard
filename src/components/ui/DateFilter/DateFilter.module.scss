@@ -1,0 +1,22 @@
+.filterContainer {
+  display: flex;
+  column-gap: $space-4;
+  row-gap: $space-2;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  label {
+    display: flex;
+    gap: $space-3;
+    align-items: center;
+  }
+  select {
+    border: 0.1rem solid var(--border-color);
+    border-radius: 0.8rem;
+    padding: $space-1 $space-2;
+  }
+}
+.error {
+  color: red;
+  font-size: 1.2rem;
+}

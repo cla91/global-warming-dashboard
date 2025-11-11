@@ -3,9 +3,12 @@ import useDocumentTitle from "@/hooks/useDocumentTitle";
 import styles from "@pages/Home/Home.module.scss";
 import useTemperature from "@/hooks/useTemperature";
 import useCarbonDioxide from "@/hooks/useCarbonDioxide";
+import useGlobalSeaIce from "@/hooks/useGlobalSeaIce";
+
 import useMethane from "@/hooks/useMethane";
 import useNitrousOxide from "@/hooks/useNitrousOxide";
-import useGlobalSeaIce from "@/hooks/useGlobalSeaIce";
+
+import { Link } from "react-router-dom";
 
 export default function Home() {
   useDocumentTitle("Global Warming Dashboard");
@@ -14,27 +17,40 @@ export default function Home() {
     <div className={`${styles.home}`}>
       <h1>Overview</h1>
       <div className={styles.cardGrid}>
-        <CategoryCard
-          title={"Temperature"}
-          className={"temp"}
-          query={useTemperature}
-        />
-        <CategoryCard
-          title={"Carbon Dioxide"}
-          className={"co2"}
-          query={useCarbonDioxide}
-        />
-        <CategoryCard title={"Methane"} className={"ch4"} query={useMethane} />
-        <CategoryCard
-          title={"Nitrous Oxide"}
-          className={"n2o"}
-          query={useNitrousOxide}
-        />
-        <CategoryCard
-          title={"Global Sea Ice"}
-          className={"gsi"}
-          query={useGlobalSeaIce}
-        />
+        <Link to="/temperature" className={styles.cardLink}>
+          <CategoryCard
+            title={"Temperature"}
+            sparktype="line"
+            query={useTemperature}
+          />
+        </Link>
+        <Link to="/carbon-dioxide" className={styles.cardLink}>
+          <CategoryCard
+            title={"Carbon Dioxide"}
+            sparktype="line"
+            query={useCarbonDioxide}
+          />
+        </Link>
+        <Link to="/methane" className={styles.cardLink}>
+          <CategoryCard title={"Methane"} sparktype="bar" query={useMethane} />
+        </Link>
+        <Link to="/nitrous-oxide" className={styles.cardLink}>
+          <CategoryCard
+            title={"Nitrous Oxide"}
+            sparktype="bar"
+            query={useNitrousOxide}
+          />
+        </Link>
+        <Link to="/global-sea-ice" className={styles.cardLink}>
+          <CategoryCard
+            title={"Global Sea Ice"}
+            sparktype="line"
+            query={useGlobalSeaIce}
+          />
+        </Link>
+        {/* 
+        
+         */}
       </div>
     </div>
   );

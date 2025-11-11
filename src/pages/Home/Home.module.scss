@@ -8,3 +8,19 @@
   gap: $space-4;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
 }
+.cardLink {
+  border-radius: $space-3;
+  transition: transform 0.2s ease-in-out;
+  //fix for overflow issue with sparkline
+  min-width: 0;
+  &:focus-visible,
+  &:focus {
+    outline: 0.2rem solid var(--text-color-primary);
+    outline-offset: 0.4rem;
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(101%);
+    border: 0.1rem solid var(--border-color);
+  }
+}

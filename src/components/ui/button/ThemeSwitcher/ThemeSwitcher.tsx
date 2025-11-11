@@ -3,6 +3,7 @@ import styles from "@components/ui/button/ThemeSwitcher/ThemeSwitcher.module.scs
 import { useEffect, useState } from "react";
 import getLocalStorageTheme from "@/utils/getLocalStorageTheme";
 import setLocalStorageTheme from "@/utils/setLocalStorageTheme";
+import refreshAllCharts from "@/chartUtils/refreshAllCharts";
 
 interface ThemeSwitcherProps {
   minimized?: boolean;
@@ -19,7 +20,15 @@ export default function ThemeSwitcher({ minimized }: ThemeSwitcherProps) {
       document.documentElement.setAttribute("data-theme", theme);
     }
     setLocalStorageTheme(theme);
+    refreshAllCharts();
   }, [theme]);
+
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleSystemChange = () => refreshAllCharts();
+    media.addEventListener("change", handleSystemChange);
+    return () => media.removeEventListener("change", handleSystemChange);
+  }, []);
 
   function handleClick(selectedTheme: "light" | "dark" | "system") {
     setTheme(selectedTheme);

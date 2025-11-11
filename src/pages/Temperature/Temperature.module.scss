@@ -1,0 +1,10 @@
+.temperaturePage {
+  display: grid;
+  gap: $space-5;
+}
+.chartSection {
+  display: grid;
+  gap: $space-3;
+  min-width: 0;
+  text-align: center;
+}

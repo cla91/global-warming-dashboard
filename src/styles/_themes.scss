@@ -18,12 +18,13 @@
   --ch4-navLink-hover: hsl(#{$pink-700});
   --n2o-navLink-hover: hsl(#{$green-700});
   --gsi-navLink-hover: hsl(#{$blue-700});
-  /* card */
-  --temp-card-bg: hsl(#{$orange-600});
-  --co2-card-bg: hsl(#{$mint-600});
-  --ch4-card-bg: hsl(#{$pink-600});
-  --n2o-card-bg: hsl(#{$green-600});
-  --gsi-card-bg: hsl(#{$blue-600});
+  /* chart */
+  --temp-chart-station: hsl(#{$orange-600});
+  --temp-chart-land: hsl(#{$sky-600});
+  --co2-chart: hsl(#{$mint-600});
+  --ch4-chart: hsl(#{$pink-600});
+  --n2o-chart: hsl(#{$green-600});
+  --gsi-chart: hsl(#{$blue-600});
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -44,12 +45,13 @@
     --ch4-navLink-hover: hsl(#{$pink-200});
     --n2o-navLink-hover: hsl(#{$green-200});
     --gsi-navLink-hover: hsl(#{$blue-200});
-    /* card */
-    --temp-card-bg: hsl(#{$orange-500});
-    --co2-card-bg: hsl(#{$mint-400});
-    --ch4-card-bg: hsl(#{$pink-400});
-    --n2o-card-bg: hsl(#{$green-400});
-    --gsi-card-bg: hsl(#{$blue-400});
+    /* chart */
+    --temp-chart-station: hsl(#{$orange-500});
+    --temp-chart-land: hsl(#{$sky-500});
+    --co2-chart: hsl(#{$mint-400});
+    --ch4-chart: hsl(#{$pink-400});
+    --n2o-chart: hsl(#{$green-400});
+    --gsi-chart: hsl(#{$blue-400});
   }
 }
 [data-theme="light"] {
@@ -71,12 +73,13 @@
   --ch4-navLink-hover: hsl(#{$pink-700});
   --n2o-navLink-hover: hsl(#{$green-700});
   --gsi-navLink-hover: hsl(#{$blue-700});
-  /* card */
-  --temp-card-bg: hsl(#{$orange-600});
-  --co2-card-bg: hsl(#{$mint-600});
-  --ch4-card-bg: hsl(#{$pink-600});
-  --n2o-card-bg: hsl(#{$green-600});
-  --gsi-card-bg: hsl(#{$blue-600});
+  /* chart */
+  --temp-chart-station: hsl(#{$orange-600});
+  --temp-chart-land: hsl(#{$sky-600});
+  --co2-chart: hsl(#{$mint-600});
+  --ch4-chart: hsl(#{$pink-600});
+  --n2o-chart: hsl(#{$green-600});
+  --gsi-chart: hsl(#{$blue-600});
 }
 [data-theme="dark"] {
   color-scheme: dark;
@@ -97,10 +100,11 @@
   --ch4-navLink-hover: hsl(#{$pink-200});
   --n2o-navLink-hover: hsl(#{$green-200});
   --gsi-navLink-hover: hsl(#{$blue-200});
-  /* card */
-  --temp-card-bg: hsl(#{$orange-500});
-  --co2-card-bg: hsl(#{$mint-400});
-  --ch4-card-bg: hsl(#{$pink-400});
-  --n2o-card-bg: hsl(#{$green-400});
-  --gsi-card-bg: hsl(#{$blue-400});
+  /* chart */
+  --temp-chart-station: hsl(#{$orange-500});
+  --temp-chart-land: hsl(#{$sky-500});
+  --co2-chart: hsl(#{$mint-400});
+  --ch4-chart: hsl(#{$pink-400});
+  --n2o-chart: hsl(#{$green-400});
+  --gsi-chart: hsl(#{$blue-400});
 }

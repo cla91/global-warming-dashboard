@@ -3,3 +3,13 @@
   height: 2rem;
   stroke-width: 1.75;
 }
+.lucide.loader-circle {
+  width: 4rem;
+  height: 4rem;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

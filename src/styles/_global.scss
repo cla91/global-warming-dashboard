@@ -3,8 +3,10 @@
 * {
   transition: color 0.3s ease, background-color 0.3s ease;
 }
+html {
+  color-scheme: light dark;
+}
 body {
-  color-scheme: dark light;
   font-family: $font-primary;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -42,6 +44,9 @@ h3 {
   @include mixins.screen-lg {
     font-size: 1.8rem;
   }
+}
+select {
+  background-color: var(--bg-color);
 }
 main {
   padding-block: $space-6;

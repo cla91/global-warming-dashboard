@@ -5,7 +5,6 @@ import useTemperature from "@/hooks/useTemperature";
 import getYearRange from "@/utils/getYearRange";
 import { useState } from "react";
 import getFilteredData from "@/utils/getFilteredData";
-import styles from "@pages/Temperature/Temperature.module.scss";
 import PageFooter from "@/components/layout/PageFooter/PageFooter";
 import LegendDetails from "@/components/ui/LegendDetails/LegendDetails";
 
@@ -24,9 +23,9 @@ export default function Temperature() {
   const unit = data?.unitLong || "°C";
 
   return (
-    <div className={styles.temperaturePage}>
+    <main>
       <h1>Global Surface Temperature</h1>
-      <section className={styles.infoSection}>
+      <section>
         <h2>Overview</h2>
         <p>
           This chart shows the{" "}
@@ -43,7 +42,7 @@ export default function Temperature() {
           </p>
         )}
       </section>
-      <section className={styles.chartSection}>
+      <section className="chartSection">
         <h2>Data Visualization - {unit}</h2>
         <DateFilter
           fromYear={fromYear}
@@ -80,6 +79,6 @@ export default function Temperature() {
           doi:10.1029/2018JD029522.
         </p>
       </PageFooter>
-    </div>
+    </main>
   );
 }

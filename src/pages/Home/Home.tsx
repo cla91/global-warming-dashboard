@@ -14,8 +14,13 @@ export default function Home() {
   useDocumentTitle("Global Warming Dashboard");
 
   return (
-    <div className={`${styles.home}`}>
+    <main>
       <h1>Overview</h1>
+      <p>
+        This dashboard provides key indicators of global climate change. Each
+        card shows the latest measurement and recent trends for a major climate
+        variable — including temperature, greenhouse gases, and sea ice extent.
+      </p>
       <div className={styles.cardGrid}>
         <Link to="/temperature" className={styles.cardLink}>
           <CategoryCard
@@ -48,10 +53,7 @@ export default function Home() {
             query={useGlobalSeaIce}
           />
         </Link>
-        {/* 
-        
-         */}
       </div>
-    </div>
+    </main>
   );
 }

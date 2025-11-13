@@ -27,12 +27,17 @@ export default function Navigation({
           <NavLink
             onClick={closeMenu}
             to="/"
-            className={({ isActive }) => (isActive ? styles.active : "")}
+            className={({ isActive }) =>
+              `${isActive ? styles.active : ""} ${
+                isDesktop && onlyIcons ? styles.onlyIcons : ""
+              }`
+            }
           >
-            <House />
-            <span className={isDesktop && onlyIcons ? "sr-only" : ""}>
-              Overview
+            <span className={styles.icon}>
+              <House />
             </span>
+
+            <span className={styles.linkText}>Overview</span>
           </NavLink>
         </li>
         <li>
@@ -40,13 +45,15 @@ export default function Navigation({
             onClick={closeMenu}
             to="/temperature"
             className={({ isActive }) =>
-              `${styles.temperature} ${isActive ? styles.active : ""}`
+              `${styles.temp} ${isActive ? styles.active : ""} ${
+                isDesktop && onlyIcons ? styles.onlyIcons : ""
+              }`
             }
           >
-            <ThermometerSun />
-            <span className={isDesktop && onlyIcons ? "sr-only" : ""}>
-              Temperature
+            <span className={styles.icon}>
+              <ThermometerSun />
             </span>
+            <span className={styles.linkText}>Temperature</span>
           </NavLink>
         </li>
         <li>
@@ -54,14 +61,15 @@ export default function Navigation({
             onClick={closeMenu}
             to="/carbon-dioxide"
             className={({ isActive }) =>
-              `${styles.carbonDioxide} ${isActive ? styles.active : ""}`
+              `${styles.co2} ${isActive ? styles.active : ""} ${
+                isDesktop && onlyIcons ? styles.onlyIcons : ""
+              }`
             }
           >
-            <TextIcon text="CO₂" />
-            <span className={isDesktop && onlyIcons ? "sr-only" : ""}>
-              {" "}
-              Carbon Dioxide
+            <span className={styles.icon}>
+              <TextIcon text="CO₂" />
             </span>
+            <span className={styles.linkText}>Carbon Dioxide</span>
           </NavLink>
         </li>
         <li>
@@ -69,13 +77,15 @@ export default function Navigation({
             onClick={closeMenu}
             to="/methane"
             className={({ isActive }) =>
-              `${styles.methane} ${isActive ? styles.active : ""}`
+              `${styles.ch4} ${isActive ? styles.active : ""} ${
+                isDesktop && onlyIcons ? styles.onlyIcons : ""
+              }`
             }
           >
-            <TextIcon text="CH₄" />
-            <span className={isDesktop && onlyIcons ? "sr-only" : ""}>
-              Methane
+            <span className={styles.icon}>
+              <TextIcon text="CH₄" />
             </span>
+            <span className={styles.linkText}>Methane</span>
           </NavLink>
         </li>
         <li>
@@ -83,13 +93,15 @@ export default function Navigation({
             onClick={closeMenu}
             to="/nitrous-oxide"
             className={({ isActive }) =>
-              `${styles.nitrousOxide} ${isActive ? styles.active : ""}`
+              `${styles.n2o} ${isActive ? styles.active : ""} ${
+                isDesktop && onlyIcons ? styles.onlyIcons : ""
+              }`
             }
           >
-            <TextIcon text="N₂O" />
-            <span className={isDesktop && onlyIcons ? "sr-only" : ""}>
-              Nitrous Oxide
+            <span className={styles.icon}>
+              <TextIcon text="N₂O" />
             </span>
+            <span className={styles.linkText}>Nitrous Oxide</span>
           </NavLink>
         </li>
         <li>
@@ -97,13 +109,15 @@ export default function Navigation({
             onClick={closeMenu}
             to="/global-sea-ice"
             className={({ isActive }) =>
-              `${styles.globalSeaIce} ${isActive ? styles.active : ""}`
+              `${styles.gsi} ${isActive ? styles.active : ""} ${
+                isDesktop && onlyIcons ? styles.onlyIcons : ""
+              }`
             }
           >
-            <MountainSnow />
-            <span className={isDesktop && onlyIcons ? "sr-only" : ""}>
-              Global Sea Ice
+            <span className={styles.icon}>
+              <MountainSnow />
             </span>
+            <span className={styles.linkText}>Global Sea Ice</span>
           </NavLink>
         </li>
       </ul>

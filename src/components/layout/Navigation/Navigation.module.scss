@@ -12,14 +12,38 @@
     transition: stroke-width 0.3s ease;
   }
   a {
+    width: 100%;
     height: $space-12;
-    display: grid;
+    display: flex;
     align-items: center;
     grid-template-columns: $space-12 1fr;
     border-radius: 1.2rem;
     transition: background-color 0.3s ease, color 0.3s ease,
-      font-weight 0.3s ease;
-    /* base hover state */
+      font-weight 0.3s ease, width 0.4s ease;
+    overflow: hidden;
+    .linkText {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform-origin: left;
+      white-space: nowrap;
+    }
+    &.onlyIcons {
+      width: 4.8rem;
+      .linkText {
+        opacity: 0;
+        transform: translate(-0.8rem);
+      }
+    }
+  }
+  .icon {
+    display: flex;
+    min-width: 4.8rem;
+    height: 4.8rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* base hover state */
+  a {
     &:hover:not(.active) {
       color: var(--bg-color);
       font-weight: 600;
@@ -43,7 +67,7 @@
     stroke-width: 2.25;
   }
   /* category-specific active, hover and focus-visible state */
-  .temperature {
+  .temp {
     &.active {
       background-color: var(--temp-navLink);
     }
@@ -55,7 +79,7 @@
     }
   }
 
-  .carbonDioxide {
+  .co2 {
     &.active {
       background-color: var(--co2-navLink);
     }
@@ -66,7 +90,7 @@
       outline: 0.2rem solid var(--co2-navLink);
     }
   }
-  .methane {
+  .ch4 {
     &.active {
       background-color: var(--ch4-navLink);
     }
@@ -77,7 +101,7 @@
       outline: 0.2rem solid var(--ch4-navLink);
     }
   }
-  .nitrousOxide {
+  .n2o {
     &.active {
       background-color: var(--n2o-navLink);
     }
@@ -88,7 +112,7 @@
       outline: 0.2rem solid var(--n2o-navLink);
     }
   }
-  .globalSeaIce {
+  .gsi {
     &.active {
       background-color: var(--gsi-navLink);
     }

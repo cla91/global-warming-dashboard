@@ -1,11 +1,14 @@
 .header {
   position: relative;
   background-color: var(--bg-color);
+
   @include screen-md {
-    position: fixed;
-    width: 28rem;
+    position: sticky;
+    top: 0;
+    align-self: start;
     height: 100vh;
     height: 100dvh;
+    width: 28rem;
     padding-inline: $space-5;
     padding-block-start: $space-6;
     padding-block-end: $space-10;
@@ -13,7 +16,8 @@
     display: grid;
     gap: $space-4;
     grid-template-rows: auto 1fr;
-    transition: width 0.2s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    grid-row: span 2;
     &.minimized {
       width: 9.1rem;
     }
@@ -27,25 +31,30 @@
   padding-inline: $space-4;
   border-bottom: 0.1rem solid var(--border-color);
   @include screen-md {
+    position: relative;
     border-bottom: none;
     padding-inline: 0;
-    flex-wrap: wrap;
-    transition: translate 0.3s ease-in-out;
     height: auto;
     padding-block-end: $space-4;
-    &.minimized {
-      gap: $space-4;
-      max-width: min-content;
-      justify-self: center;
-      justify-content: center;
-    }
   }
 }
 .logoLink {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: var(--space);
+  gap: $space-1;
+  height: 4.8rem;
+  @include screen-md {
+    padding-inline: $space-3;
+    width: 100%;
+    transition: width 0.4s ease-in-out, padding-inline 0.4s ease-in-out;
+    &.onlyIcons {
+      padding-inline: $space-2;
+      width: 4.8rem;
+      .logoText {
+        opacity: 0;
+      }
+    }
+  }
 }
 .logoImg {
   max-width: $space-8;
@@ -53,6 +62,8 @@
 .logoText {
   font-size: 2rem;
   font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
 }
 .menu {
   /* global */

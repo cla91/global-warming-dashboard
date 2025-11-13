@@ -21,7 +21,7 @@ export default function GlobalSeaIce() {
   const unit = data?.unitLong || "million square kilometers";
   const basePeriod = "1991-2020";
   return (
-    <>
+    <main>
       <h1>Global Sea Ice Extent</h1>
       <section>
         <h2>Overview</h2>
@@ -45,7 +45,7 @@ export default function GlobalSeaIce() {
           </p>
         )}
       </section>
-      <section>
+      <section className="chartSection">
         <h2>Data Visualization - {unit}</h2>
         <DateFilter
           fromYear={fromYear}
@@ -73,6 +73,6 @@ export default function GlobalSeaIce() {
           )
         </p>
       </PageFooter>
-    </>
+    </main>
   );
 }

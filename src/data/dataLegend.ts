@@ -22,7 +22,7 @@ export const dataLegend: Record<Category, SingleLegend[]> = {
     {
       label: "trend",
       description:
-        "represents the monthly mean atmospheric CO₂ concentration, the trend is seasonally adjusted to highlight the long-term increase in carbon dioxide levels.",
+        "represents the daily mean atmospheric CO₂ concentration, the trend is seasonally adjusted to highlight the long-term increase in carbon dioxide levels.",
     },
   ],
   ch4: [

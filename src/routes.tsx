@@ -1,11 +1,12 @@
+import { lazy } from "react";
 import App from "@/App";
 import Error from "@pages/Error/Error";
-import Home from "@pages/Home/Home";
-import Temperature from "@pages/Temperature/Temperature";
-import CarbonDioxide from "@pages/CarbonDioxide/CarbonDioxide";
-import Methane from "@pages/Methane/Methane";
-import NitrousOxide from "@pages/NitrousOxide/NitrousOxide";
-import GlobalSeaIce from "@/pages/GlobalSeaIce/GlobalSeaIce";
+const Home = lazy(() => import("@pages/Home/Home"));
+const Temperature = lazy(() => import("@pages/Temperature/Temperature"));
+const CarbonDioxide = lazy(() => import("@pages/CarbonDioxide/CarbonDioxide"));
+const Methane = lazy(() => import("@pages/Methane/Methane"));
+const NitrousOxide = lazy(() => import("@pages/NitrousOxide/NitrousOxide"));
+const GlobalSeaIce = lazy(() => import("@pages/GlobalSeaIce/GlobalSeaIce"));
 
 export default [
   {

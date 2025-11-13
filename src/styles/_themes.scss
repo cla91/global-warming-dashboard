@@ -1,6 +1,7 @@
 @use "variables" as *;
 
 :root {
+  color-scheme: light;
   --bg-color: hsl(#{$violet-50});
   --text-color-primary: hsl(#{$violet-850});
   --text-color-secondary: hsl(#{$violet-600});
@@ -28,6 +29,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
+    color-scheme: dark;
     --bg-color: hsl(#{$violet-900});
     --text-color-primary: hsl(#{$violet-50});
     --text-color-secondary: hsl(#{$violet-350});

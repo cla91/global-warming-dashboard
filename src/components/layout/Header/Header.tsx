@@ -5,24 +5,39 @@ import { Link } from "react-router-dom";
 import styles from "@components/layout/Header/Header.module.scss";
 import HamburgerButton from "@components/ui/button/HamburgerButton/HamburgerButton";
 import MinimizeMenu from "@components/ui/button/MinimizeMenu/MinimizeMenu";
-import { useState } from "react";
-import useSidebarContext from "@/context/Sidebar/useSidebarContext";
+import { useEffect, useState } from "react";
 import useMediaQuery from "@/hooks/useMediaQuery";
 
-export default function Header() {
+export default function HeaderProva() {
   const isDesktop = useMediaQuery("(min-width: 48rem)");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { minimize } = useSidebarContext();
+  const [minimizeMenu, setMinimizeMenu] = useState(false);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [mobileMenuOpen]);
 
   return (
-    <header className={`${styles.header} ${minimize ? styles.minimized : ""}`}>
-      <div className={`${styles.topBar} ${minimize ? styles.minimized : ""}`}>
+    <header
+      className={`${styles.header} ${minimizeMenu ? styles.minimized : ""}`}
+    >
+      <div
+        className={`${styles.topBar} ${minimizeMenu ? styles.minimized : ""}`}
+      >
         {/* logo */}
-        <Link to="/" className={styles.logoLink}>
+        <Link
+          to="/"
+          className={`${styles.logoLink} ${
+            minimizeMenu ? styles.onlyIcons : ""
+          } `}
+        >
           <img className={styles.logoImg} src={logo} alt="Logo GlobalWarming" />
-          <span className={`${minimize ? "sr-only" : ""} ${styles.logoText}`}>
-            GlobalWarming
-          </span>
+          <span className={`${styles.logoText}`}>GlobalWarming</span>
         </Link>
 
         {/* controller mobile menu */}
@@ -31,7 +46,10 @@ export default function Header() {
           setMenuOpen={setMobileMenuOpen}
         />
         {/* controller desktop menu */}
-        <MinimizeMenu />
+        <MinimizeMenu
+          minimize={minimizeMenu}
+          setIsMinimized={setMinimizeMenu}
+        />
       </div>
 
       {/* menu */}
@@ -41,11 +59,11 @@ export default function Header() {
         className={`${styles.menu} ${mobileMenuOpen ? styles.open : ""}`}
       >
         <Navigation
-          onlyIcons={minimize}
+          onlyIcons={minimizeMenu}
           menuOpen={mobileMenuOpen}
           setMenuOpen={setMobileMenuOpen}
         />
-        <ThemeSwitcher minimized={minimize} />
+        <ThemeSwitcher minimized={minimizeMenu} />
       </div>
     </header>
   );

@@ -22,14 +22,14 @@ export default function CarbonDioxide() {
   const unit = data?.unitLong || "Parts per million (ppm)";
 
   return (
-    <>
+    <main>
       <h1>Atmospheric Carbon Dioxide</h1>
       <section>
         <h2>Overview</h2>
         <p>
           This chart shows the{" "}
-          <strong>monthly mean atmospheric CO₂ concentration</strong> measured
-          at Mauna Loa Observatory, Hawaii. The
+          <strong>daily mean atmospheric CO₂ concentration</strong> measured at
+          Mauna Loa Observatory, Hawaii. The
           <strong> trend line</strong> is seasonally adjusted to remove the
           regular annual cycle caused by natural processes such as plant growth
           and decay, revealing the long-term rise in CO₂ concentrations driven
@@ -42,7 +42,7 @@ export default function CarbonDioxide() {
           </p>
         )}
       </section>
-      <section>
+      <section className="chartSection">
         <h2>Data visualization - {unit}</h2>
         <DateFilter
           fromYear={fromYear}
@@ -69,6 +69,6 @@ export default function CarbonDioxide() {
           )
         </p>
       </PageFooter>
-    </>
+    </main>
   );
 }

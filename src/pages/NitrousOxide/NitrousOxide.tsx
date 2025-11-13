@@ -21,7 +21,7 @@ export default function NitrousOxide() {
   const endDate = yearRange.length > 0 ? yearRange[0] : "";
   const unit = data?.unitLong || "parts per billion (ppb)";
   return (
-    <>
+    <main>
       <h1>Atmospheric Nitrous Oxide</h1>
       <section>
         <h2>Overview</h2>
@@ -42,7 +42,7 @@ export default function NitrousOxide() {
           </p>
         )}
       </section>
-      <section>
+      <section className="chartSection">
         <h2>Data Visualization - {unit}</h2>
         <DateFilter
           fromYear={fromYear}
@@ -69,6 +69,6 @@ export default function NitrousOxide() {
           )
         </p>
       </PageFooter>
-    </>
+    </main>
   );
 }

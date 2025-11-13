@@ -1,28 +1,26 @@
-import { PanelLeftClose, PanelLeftOpen } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import styles from "@components/ui/button/MinimizeMenu/MinimizeMenu.module.scss";
 
-import useSidebarContext from "@/context/Sidebar/useSidebarContext";
+interface MinimizeMenuProps {
+  minimize: boolean;
+  setIsMinimized: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-export default function MinimizeMenu() {
-  const { minimize, setIsMinimized } = useSidebarContext();
-
+export default function MinimizeMenu({
+  minimize,
+  setIsMinimized,
+}: MinimizeMenuProps) {
   return (
     <button
       onClick={() => setIsMinimized((minimize) => !minimize)}
-      className={styles.minimizeBtn}
+      className={`${styles.minimizeBtn} ${minimize ? styles.shifted : ""}`}
       title={minimize ? "Expand Menu" : "Minimize Menu"}
     >
-      {minimize ? (
-        <>
-          <span className="sr-only">"Expand Menu"</span>
-          <PanelLeftOpen />
-        </>
-      ) : (
-        <>
-          <span className="sr-only">"Minimize Menu"</span>
-          <PanelLeftClose />
-        </>
-      )}
+      <span className="sr-only">
+        {minimize ? "Expand Menu" : "Minimize Menu"}
+      </span>
+
+      <ChevronLeft className={`${minimize ? styles.rotate : ""}`} />
     </button>
   );
 }

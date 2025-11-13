@@ -7,7 +7,7 @@ interface PageFooterProps {
 export default function PageFooter({ children }: PageFooterProps) {
   return (
     <footer className={style.pageFooter}>
-      <h2>Data sources</h2>
+      <h3>Data sources</h3>
       {children}
     </footer>
   );

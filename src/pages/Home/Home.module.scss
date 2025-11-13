@@ -1,10 +1,6 @@
-.home {
-  display: grid;
-  gap: $space-8;
-  grid-template-rows: auto 1fr;
-}
 .cardGrid {
   display: grid;
+  align-content: baseline;
   gap: $space-4;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
 }

@@ -1,0 +1,18 @@
+.footer {
+  font-size: 1.2rem;
+  text-align: center;
+  border-top: 0.1rem solid var(--border-color);
+  padding-block: $space-4;
+  padding-inline: $space-5;
+  margin-block-start: $space-5;
+  transition: padding 0.2s ease-in-out;
+  a {
+    text-decoration: underline;
+    &:hover {
+      color: var(--text-color-secondary);
+    }
+  }
+  @include screen-lg {
+    padding-inline: $space-10;
+  }
+}

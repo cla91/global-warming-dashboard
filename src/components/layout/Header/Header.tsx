@@ -12,7 +12,11 @@ export default function HeaderProva() {
   const isDesktop = useMediaQuery("(min-width: 48rem)");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [minimizeMenu, setMinimizeMenu] = useState(false);
-
+  function closeMenu() {
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false);
+    }
+  }
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -32,6 +36,7 @@ export default function HeaderProva() {
         {/* logo */}
         <Link
           to="/"
+          onClick={closeMenu}
           className={`${styles.logoLink} ${
             minimizeMenu ? styles.onlyIcons : ""
           } `}

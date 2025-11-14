@@ -1,4 +1,7 @@
+import getComputedProperyValue from "@/utils/getComputedPropertyValue";
 import type { ChartOptions } from "chart.js";
+
+const currentColor = () => getComputedProperyValue("text-color-primary");
 
 export const lineChartOptions = (unit: string): ChartOptions<"line"> => ({
   responsive: true,
@@ -18,10 +21,11 @@ export const lineChartOptions = (unit: string): ChartOptions<"line"> => ({
   plugins: {
     legend: {
       labels: {
-        color: "currentColor",
+        color: "rgb(119, 119, 119)",
         font: {
-          size: 16,
-          family: "inherit",
+          size: 14,
+          family: "Inter, sans-serif",
+          weight: 500,
         },
       },
     },
@@ -39,7 +43,7 @@ export const lineChartOptions = (unit: string): ChartOptions<"line"> => ({
       ticks: {
         padding: 10,
         source: "data",
-        color: "currentColor",
+        color: currentColor,
         font: {
           size: 12,
           family: "Inter, sans-serif",
@@ -52,16 +56,21 @@ export const lineChartOptions = (unit: string): ChartOptions<"line"> => ({
     y: {
       ticks: {
         padding: 10,
-        color: "currentColor",
+        color: currentColor,
         font: {
           size: 12,
           family: "Inter, sans-serif",
         },
       },
       title: {
-        color: "currentColor",
+        color: "rgb(119, 119, 119)",
         display: true,
         text: unit,
+        font: {
+          size: 14,
+          family: "Inter, sans-serif",
+          weight: 500,
+        },
       },
       grid: {
         color: "rgba(119, 119, 119, 0.1)",

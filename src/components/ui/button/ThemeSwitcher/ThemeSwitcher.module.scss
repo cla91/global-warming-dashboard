@@ -1,0 +1,46 @@
+.switchGroup {
+  border-radius: $space-3;
+  background-color: var(--card-color);
+  display: flex;
+  margin-block-start: auto;
+  width: 100%;
+  height: $space-12;
+  transition: all 0.4s ease;
+  gap: $space-1;
+  button {
+    flex: 1 1 $space-12;
+    height: $space-12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $space-3;
+    transition: all 0.3s ease;
+
+    &:hover:not([aria-pressed="true"]) {
+      background-color: var(--text-color-secondary);
+      color: (var(--bg-color));
+    }
+    &:focus-visible {
+      outline: 0.2rem solid var(--text-color-primary);
+      outline-offset: 0.2rem;
+    }
+  }
+  [aria-pressed="true"] {
+    background-color: var(--text-color-primary);
+    color: (var(--bg-color));
+    :global(.lucide) {
+      stroke-width: 2.15;
+    }
+  }
+  @include screen-md {
+    &.minimized {
+      height: auto;
+      flex-direction: column;
+      width: $space-12;
+      button {
+        width: 100%;
+        flex: 0 0 $space-12;
+      }
+    }
+  }
+}

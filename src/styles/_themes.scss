@@ -1,0 +1,112 @@
+@use "variables" as *;
+
+:root {
+  color-scheme: light;
+  --bg-color: hsl(#{$violet-50});
+  --text-color-primary: hsl(#{$violet-850});
+  --text-color-secondary: hsl(#{$violet-600});
+  --border-color: hsl(#{$neutral-200});
+  --card-color: hsl(#{$violet-25});
+  /* category color */
+  /* navLink */
+  --temp-navLink: hsl(#{$orange-600});
+  --co2-navLink: hsl(#{$mint-600});
+  --ch4-navLink: hsl(#{$pink-600});
+  --n2o-navLink: hsl(#{$green-600});
+  --gsi-navLink: hsl(#{$blue-600});
+  --temp-navLink-hover: hsl(#{$orange-700});
+  --co2-navLink-hover: hsl(#{$mint-700});
+  --ch4-navLink-hover: hsl(#{$pink-700});
+  --n2o-navLink-hover: hsl(#{$green-700});
+  --gsi-navLink-hover: hsl(#{$blue-700});
+  /* chart */
+  --temp-chart-station: hsl(#{$orange-600});
+  --temp-chart-land: hsl(#{$sky-600});
+  --co2-chart: hsl(#{$mint-600});
+  --ch4-chart: hsl(#{$pink-600});
+  --n2o-chart: hsl(#{$green-600});
+  --gsi-chart: hsl(#{$blue-600});
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg-color: hsl(#{$violet-900});
+    --text-color-primary: hsl(#{$violet-50});
+    --text-color-secondary: hsl(#{$violet-350});
+    --border-color: hsl(#{$violet-750});
+    --card-color: hsl(#{$violet-800});
+    /* category color */
+    /* navLink */
+    --temp-navLink: hsl(#{$orange-500});
+    --co2-navLink: hsl(#{$mint-400});
+    --ch4-navLink: hsl(#{$pink-400});
+    --n2o-navLink: hsl(#{$green-400});
+    --gsi-navLink: hsl(#{$blue-400});
+    --temp-navLink-hover: hsl(#{$orange-200});
+    --co2-navLink-hover: hsl(#{$mint-200});
+    --ch4-navLink-hover: hsl(#{$pink-200});
+    --n2o-navLink-hover: hsl(#{$green-200});
+    --gsi-navLink-hover: hsl(#{$blue-200});
+    /* chart */
+    --temp-chart-station: hsl(#{$orange-500});
+    --temp-chart-land: hsl(#{$sky-500});
+    --co2-chart: hsl(#{$mint-400});
+    --ch4-chart: hsl(#{$pink-400});
+    --n2o-chart: hsl(#{$green-400});
+    --gsi-chart: hsl(#{$blue-400});
+  }
+}
+[data-theme="light"] {
+  color-scheme: light;
+  --bg-color: hsl(#{$violet-50});
+  --text-color-primary: hsl(#{$violet-850});
+  --text-color-secondary: hsl(#{$violet-600});
+  --border-color: hsl(#{$neutral-200});
+  --card-color: hsl(#{$violet-25});
+  /* category color */
+  /* navLink */
+  --temp-navLink: hsl(#{$orange-600});
+  --co2-navLink: hsl(#{$mint-600});
+  --ch4-navLink: hsl(#{$pink-600});
+  --n2o-navLink: hsl(#{$green-600});
+  --gsi-navLink: hsl(#{$blue-600});
+  --temp-navLink-hover: hsl(#{$orange-700});
+  --co2-navLink-hover: hsl(#{$mint-700});
+  --ch4-navLink-hover: hsl(#{$pink-700});
+  --n2o-navLink-hover: hsl(#{$green-700});
+  --gsi-navLink-hover: hsl(#{$blue-700});
+  /* chart */
+  --temp-chart-station: hsl(#{$orange-600});
+  --temp-chart-land: hsl(#{$sky-600});
+  --co2-chart: hsl(#{$mint-600});
+  --ch4-chart: hsl(#{$pink-600});
+  --n2o-chart: hsl(#{$green-600});
+  --gsi-chart: hsl(#{$blue-600});
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-color: hsl(#{$violet-900});
+  --text-color-primary: hsl(#{$violet-50});
+  --text-color-secondary: hsl(#{$violet-350});
+  --border-color: hsl(#{$violet-750});
+  --card-color: hsl(#{$violet-800});
+  /* category color */
+  /* navLink */
+  --temp-navLink: hsl(#{$orange-500});
+  --co2-navLink: hsl(#{$mint-400});
+  --ch4-navLink: hsl(#{$pink-400});
+  --n2o-navLink: hsl(#{$green-400});
+  --gsi-navLink: hsl(#{$blue-400});
+  --temp-navLink-hover: hsl(#{$orange-200});
+  --co2-navLink-hover: hsl(#{$mint-200});
+  --ch4-navLink-hover: hsl(#{$pink-200});
+  --n2o-navLink-hover: hsl(#{$green-200});
+  --gsi-navLink-hover: hsl(#{$blue-200});
+  /* chart */
+  --temp-chart-station: hsl(#{$orange-500});
+  --temp-chart-land: hsl(#{$sky-500});
+  --co2-chart: hsl(#{$mint-400});
+  --ch4-chart: hsl(#{$pink-400});
+  --n2o-chart: hsl(#{$green-400});
+  --gsi-chart: hsl(#{$blue-400});
+}

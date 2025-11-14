@@ -1,0 +1,126 @@
+.navigation {
+  ul {
+    display: grid;
+    gap: $space-2;
+  }
+  /* base styles for lucide icon, defined globally */
+  :global(.lucide) {
+    width: 2rem;
+    height: 2rem;
+    stroke-width: 1.75;
+    justify-self: center;
+    transition: stroke-width 0.3s ease;
+  }
+  a {
+    width: 100%;
+    height: $space-12;
+    display: flex;
+    align-items: center;
+    grid-template-columns: $space-12 1fr;
+    border-radius: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease,
+      font-weight 0.3s ease, width 0.4s ease;
+    overflow: hidden;
+    .linkText {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform-origin: left;
+      white-space: nowrap;
+    }
+    &.onlyIcons {
+      width: 4.8rem;
+      .linkText {
+        opacity: 0;
+        transform: translate(-0.8rem);
+      }
+    }
+  }
+  .icon {
+    display: flex;
+    min-width: 4.8rem;
+    height: 4.8rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* base hover state */
+  a {
+    &:hover:not(.active) {
+      color: var(--bg-color);
+      font-weight: 600;
+      background-color: var(--text-color-secondary);
+      :global(.lucide) {
+        stroke-width: 2.25;
+      }
+    }
+    &:focus-visible {
+      outline: 0.2rem solid var(--text-color-primary);
+      outline-offset: 0.2rem;
+    }
+  }
+  /* base active state */
+  .active {
+    background-color: var(--text-color-primary);
+    color: var(--bg-color);
+    font-weight: 600;
+  }
+  .active :global(.lucide) {
+    stroke-width: 2.25;
+  }
+  /* category-specific active, hover and focus-visible state */
+  .temp {
+    &.active {
+      background-color: var(--temp-navLink);
+    }
+    &:hover:not(.active) {
+      background-color: var(--temp-navLink-hover);
+    }
+    &:focus-visible {
+      outline: 0.2rem solid var(--temp-navLink);
+    }
+  }
+
+  .co2 {
+    &.active {
+      background-color: var(--co2-navLink);
+    }
+    &:hover:not(.active) {
+      background-color: var(--co2-navLink-hover);
+    }
+    &:focus-visible {
+      outline: 0.2rem solid var(--co2-navLink);
+    }
+  }
+  .ch4 {
+    &.active {
+      background-color: var(--ch4-navLink);
+    }
+    &:hover:not(.active) {
+      background-color: var(--ch4-navLink-hover);
+    }
+    &:focus-visible {
+      outline: 0.2rem solid var(--ch4-navLink);
+    }
+  }
+  .n2o {
+    &.active {
+      background-color: var(--n2o-navLink);
+    }
+    &:hover:not(.active) {
+      background-color: var(--n2o-navLink-hover);
+    }
+    &:focus-visible {
+      outline: 0.2rem solid var(--n2o-navLink);
+    }
+  }
+  .gsi {
+    &.active {
+      background-color: var(--gsi-navLink);
+    }
+    &:hover:not(.active) {
+      background-color: var(--gsi-navLink-hover);
+    }
+    &:focus-visible {
+      outline: 0.2rem solid var(--gsi-navLink);
+    }
+  }
+}

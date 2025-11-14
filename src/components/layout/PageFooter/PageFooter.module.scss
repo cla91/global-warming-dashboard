@@ -1,0 +1,14 @@
+.pageFooter {
+  text-align: center;
+  color: var(--text-color-secondary);
+  font-size: 1.2rem;
+  h3 {
+    font-size: 2rem;
+  }
+  a {
+    text-decoration: underline;
+    &:hover {
+      color: var(--text-color-primary);
+    }
+  }
+}

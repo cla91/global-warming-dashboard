@@ -1,0 +1,41 @@
+.minimizeBtn {
+  display: none;
+  @include screen-md {
+    position: absolute;
+    transform: translateX(
+      calc(28rem - 2rem - 2.2rem)
+    ); //header width - padding - button width
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $space-11;
+    width: $space-11;
+    border-radius: 100%;
+    background-color: var(--text-color-primary);
+    transition: transform 0.4s ease-in-out;
+    will-change: transform;
+    &.shifted {
+      transform: translateX(
+        calc(9.1rem - 2rem - 2.2rem)
+      ); //minimized header width - padding - button width
+    }
+    :global(.lucide) {
+      transition: transform 0.4s ease;
+      color: var(--bg-color);
+      width: 3rem;
+      height: 3rem;
+      stroke-width: 2;
+      justify-self: center;
+      &.rotate {
+        transform: rotate(180deg);
+      }
+    }
+    &:hover {
+      background-color: var(--text-color-secondary);
+    }
+    &:focus-visible {
+      outline: 0.2rem solid var(--text-color-primary);
+      outline-offset: 0.2rem;
+    }
+  }
+}

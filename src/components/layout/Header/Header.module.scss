@@ -1,0 +1,101 @@
+.header {
+  position: relative;
+  background-color: var(--bg-color);
+
+  @include screen-md {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    height: 100dvh;
+    width: 28rem;
+    padding-inline: $space-5;
+    padding-block-start: $space-6;
+    padding-block-end: $space-10;
+    border-right: 0.1rem solid var(--border-color);
+    display: grid;
+    gap: $space-4;
+    grid-template-rows: auto 1fr;
+    transition: width 0.4s ease-in-out;
+    grid-row: span 2;
+    &.minimized {
+      width: 9.1rem;
+    }
+  }
+}
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6.5rem;
+  padding-inline: $space-4;
+  border-bottom: 0.1rem solid var(--border-color);
+  @include screen-md {
+    position: relative;
+    border-bottom: none;
+    padding-inline: 0;
+    height: auto;
+    padding-block-end: $space-4;
+  }
+}
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: $space-1;
+  height: 4.8rem;
+  @include screen-md {
+    padding-inline: $space-3;
+    width: 100%;
+    transition: width 0.4s ease-in-out, padding-inline 0.4s ease-in-out;
+    &.onlyIcons {
+      padding-inline: $space-2;
+      width: 4.8rem;
+      .logoText {
+        opacity: 0;
+      }
+    }
+  }
+}
+.logoImg {
+  max-width: $space-8;
+}
+.logoText {
+  font-size: 2rem;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+.menu {
+  /* global */
+  width: 100%;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  padding: $space-4;
+  padding-block-end: $space-10;
+
+  /* mobile */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: calc(100vh - 100%);
+  height: calc(100dvh - 100%);
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  &.open {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @include screen-md {
+    position: static;
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+    padding: 0;
+    transition: none;
+    background-color: transparent;
+  }
+}

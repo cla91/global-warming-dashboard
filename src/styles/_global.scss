@@ -1,0 +1,83 @@
+@use "./mixins";
+@use "./variables" as *;
+* {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+html {
+  color-scheme: light dark;
+}
+body {
+  font-family: $font-primary;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--bg-color);
+  color: var(--text-color-primary);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  @include mixins.screen-md {
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto 1fr;
+  }
+}
+main {
+  display: grid;
+  align-content: baseline;
+  gap: $space-5;
+  padding-block: $space-6;
+  padding-inline: $space-5;
+  transition: padding 0.2s ease-in-out;
+  .chartSection {
+    display: grid;
+    gap: $space-3;
+    min-width: 0;
+    text-align: center;
+  }
+  @include mixins.screen-md {
+    padding-inline: $space-9;
+  }
+  @include mixins.screen-lg {
+    padding-block: $space-8;
+    padding-inline: $space-11;
+  }
+}
+h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  line-height: 1;
+  @include mixins.screen-lg {
+    font-size: 4.4rem;
+  }
+}
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  @include mixins.screen-lg {
+    font-size: 3.2rem;
+  }
+}
+h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  @include mixins.screen-lg {
+    font-size: 1.8rem;
+  }
+}
+select {
+  background-color: var(--bg-color);
+  border: 0.1rem solid var(--border-color);
+  border-radius: 0.8rem;
+  padding: $space-1 $space-2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

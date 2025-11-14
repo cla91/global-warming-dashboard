@@ -1,0 +1,16 @@
+.lucide {
+  width: 2rem;
+  height: 2rem;
+  stroke-width: 1.75;
+  transition: stroke-width 0.3s ease;
+}
+.lucide.loader-circle {
+  width: 4rem;
+  height: 4rem;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

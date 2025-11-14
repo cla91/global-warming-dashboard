@@ -39,9 +39,12 @@ main {
     min-width: 0;
     text-align: center;
   }
+  @include mixins.screen-md {
+    padding-inline: $space-9;
+  }
   @include mixins.screen-lg {
     padding-block: $space-8;
-    padding-inline: $space-10;
+    padding-inline: $space-11;
   }
 }
 h1 {

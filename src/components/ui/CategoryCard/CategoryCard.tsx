@@ -44,7 +44,7 @@ export default function CategoryCard({
         <h3>Latest measurement</h3>
         <p>Value: "N/A"</p>
         <p>Date: "N/A"</p>
-        <p className={styles.error}>Error: {(error as Error).message}</p>
+        <p className="error-message">Error: {(error as Error).message}</p>
       </section>
     );
   }

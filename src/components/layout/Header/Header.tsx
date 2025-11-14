@@ -12,6 +12,7 @@ export default function HeaderProva() {
   const isDesktop = useMediaQuery("(min-width: 48rem)");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [minimizeMenu, setMinimizeMenu] = useState(false);
+
   function closeMenu() {
     if (mobileMenuOpen) {
       setMobileMenuOpen(false);

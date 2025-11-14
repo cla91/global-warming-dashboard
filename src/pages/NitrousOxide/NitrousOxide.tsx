@@ -51,7 +51,7 @@ export default function NitrousOxide() {
           setToYear={setToYear}
           yearRange={yearRange}
         />
-        {isError && <p>Error: {error.message}</p>}
+        {isError && <p className="error-message">Error: {error.message}</p>}
         {isPending && <p>Loading...</p>}
         {filteredData && <BarChart data={filteredData} />}
         <LegendDetails category="n2o" />

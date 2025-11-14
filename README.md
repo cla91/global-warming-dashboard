@@ -2,7 +2,7 @@
 
 Welcome to the Global Warming Dashboard — a modern single-page application designed to help users explore, understand, and visualize key global-warming indicators through clean UI, responsive layout, and interactive data-driven charts.
 
-Live site: [Global Warming Dahsboard] ()
+Live site: [Global Warming Dahsboard] (https://cla91-global-warming-dashboard.netlify.app/)
 
 ## Table of contents
 

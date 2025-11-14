@@ -75,7 +75,9 @@ select {
   border-radius: 0.8rem;
   padding: $space-1 $space-2;
 }
-
+canvas {
+  color: var(--text-color-primary) !important;
+}
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
